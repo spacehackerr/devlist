@@ -1,12 +1,13 @@
-# devlist````
+# devlist
 Useful packages, links and materials
 
 ## Содержание
-- [**PHP:**]
-    - [ ] [Packages]
+- [**PHP:**](#PHP)
+    - [ ] [Packages](#Packages-)
+    - [ ] [Static analysis tools](#Static-analysis-tools-)
 
-- [**Common useful links:**]
-
+- [**Common useful links:**](#Common-useful-links-)
+    - [ ] [Алгоритмы](#Алгоритмы-)
 
 ## PHP [&uarr;](#Содержание)
 
@@ -187,15 +188,20 @@ About communication Use case adn  presenter?
 
 - https://softwareengineering.stackexchange.com/questions/303478/uncle-bobs-clean-architecture-an-entity-model-class-for-each-layer/303480#303480
  
- An entity/model class for each layer
- https://habr.com/ru/company/mobileup/blog/335382
- / (пункт Заблуждение: Обязательность маппинга между слоями).
- Если у вас сложное приложение с логикой бизнеса и логикой приложения, и/или разные люди работают над разными слоями, то лучше разделять данные между слоями (и маппить их). Также это стоит делать, если серверное API корявое. Но если вы работаете над проектом один, и это простое приложение, то не усложняйте лишним маппингом.
+- An entity/model class for each layer https://habr.com/ru/company/mobileup/blog/335382 
+(пункт Заблуждение: Обязательность маппинга между слоями).
+ Если у вас сложное приложение с логикой бизнеса и логикой приложения, и/или разные люди работают над разными слоями, то лучше разделять данные между слоями (и маппить их). 
+ Также это стоит делать, если серверное API корявое. Но если вы работаете над проектом один, и это простое приложение, то не усложняйте лишним маппингом.
+
+
 -------------
 #### CQRS
 
-Read and write models
+Материал:
+- https://martinfowler.com/bliki/CQRS.html
+- https://www.youtube.com/watch?v=RfnySciLUhc&feature=youtu.be
 
+Read and write models
 
 - Write models - Domain models (ak DDD) domain models (агрегаты, сущности, vo) держим логику. Данные группируем по сущностям так, как удобно для логики
 - Read models. Используются для фронта например (списков, форм и тп)
@@ -216,8 +222,12 @@ Read and write models
 доменные события — это внешний контракт агрегата. его API. 
 вместо геттеров ты получаегшь куда более мощную информацию об изменениях
 
-Статьи по CQRS
-- https://martinfowler.com/bliki/CQRS.html
+
+- https://github.com/prooph/event-sourcing - Provides basic functionality for event sourced aggregates
+ (чтобы самому не реализовывать. Однако, добавляет зависимость в доменный слой)
+ 
+Пример
+- https://github.com/dmitrymendelson/cqrs_es_example (dirty example of cqrs)
 
 #### Про DTO
 
@@ -287,7 +297,6 @@ The overriden methods in child classes should throw the same or more specialized
 - (для php) инвариантность типа параметра в наследнике
 - (для php) хотя аргументы методов в подтипах всегда должны быть контравариантными, аргументы в методах подтипов __construct
  () не обязательно должны быть контравариантными в php.
-
 
 Ковариантность - сужение типов (более специфичный тип). Для возвращаемого типа метода в дочернем классе
 
