@@ -27,13 +27,12 @@ Useful packages, links and materials
     + [Инвариант](#---------)
     + [Наследование vs композиция](#-------------vs-----------)
   * [Отношения](#---------)
-    + [Принципы](#--------)
-  * [Принципы: SOLID и тд](#----------solid-----)
-    + [S SRP: Single Responsibility Principle](#s-srp--single-responsibility-principle)
-    + [O — The Open/Closed Principle](#o---the-open-closed-principle)
+  * [SOLID etc](#solid-etc)
+    + [Single Responsibility Principle](#single-responsibility-principle)
+    + [The OpenClosed Principle](#the-openclosed-principle)
     + [L - LSP - Liskov Substitution Principle](#l---lsp---liskov-substitution-principle)
-    + [I — The Interface Segregation Principle](#i---the-interface-segregation-principle)
-    + [D — The Dependency Inversion Principle](#d---the-dependency-inversion-principle)
+    + [Interface Segregation Principle](#interface-segregation-principle)
+    + [Dependency Inversion Principle](#dependency-inversion-principle)
 - [СУБД](#----)
     + [Vertica](#vertica)
     + [Партицирование](#--------------)
@@ -396,16 +395,14 @@ file://C:/рабочие/облако/PHP/книги/прочел/Патерны
 
 - "является" - отноешение между базовым классом и его наследником
 
-#### Принципы
-
-### Принципы: SOLID и тд
+### SOLID etc
 
 YAGNI — игнорируй изменения, которых скорее всего не будет. Затык тут в «скорее всего», потому что будущее мы предсказывать не умеем.
 
 - https://habr.com/ru/post/446816/
 - https://habr.com/ru/post/208442/
 
-#### S SRP: Single Responsibility Principle
+#### Single Responsibility Principle
 - Модуль должен иметь только одну причину для изменения.  (Чистая_архитектура. Роберт Мартин, с. 79)
 - На каждый объект должна быть возложена одна единственная обязанность
 
@@ -422,7 +419,7 @@ DRY — Don't Repeat Yourself
 Принцип единственной ответственности можно развернуть в другую сторону:
 "Если несколько программных сущностей изменяются вместе по одним и тем же причинам, то на самом деле это одна программная сущность. Объедините их немедленно."
 
-#### O — The Open/Closed Principle
+#### The OpenClosed Principle
 Программные сущности должны быть открыты для расширения и закрыты для модификации.
 
 - https://web.archive.org/web/20060822033314/http://www.objectmentor.com/resources/articles/ocp.pdf
@@ -550,10 +547,10 @@ Another alternative would be making it private and having a static create(...): 
     }
 
 
-#### I — The Interface Segregation Principle
+#### Interface Segregation Principle
 Программные сущности не должны зависеть от частей интерфейса, которые они не используют (и знать о них тоже не должны).
 
-#### D — The Dependency Inversion Principle
+#### Dependency Inversion Principle
 - Модули верхних уровней не должны зависеть от модулей нижних уровней. Оба типа модулей должны зависеть от абстракций.
 - Абстракции не должны зависеть от деталей. Детали должны зависеть от абстракций.
 
