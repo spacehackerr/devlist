@@ -322,7 +322,7 @@ PHP в режиме FastCGI в памяти висит сам php интерпр
 
 Полезные курсы:
 
-- от елисеева
+- от елисеева (менеджер проектов) https://rutracker.org/forum/viewtopic.php?t=5775309
 - https://symfonycasts.com/  (или Knpuniversity) (https://coursehunter.net/course/symfony-5-glubokoe-pogruzhenie
 -httpkernel-request-response-flow)
 
